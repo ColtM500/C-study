@@ -52,3 +52,31 @@ void DisplayBoard(char board[ROW][COL], int row, int col)
         }      
     }
 }
+
+void PlayerMove(char board[ROW][COL], int row, int col)
+{
+    int x = 0;
+    int y = 0;
+    printf("玩家走:>\n");
+    while(1)
+    {
+        printf("请输入要下的坐标:>");
+        scanf("%d%d", &x, &y);
+        //判断x，y坐标的合法性
+        if(x>=1 && x<=row && y>=1 && y<=col)
+        {
+            if(board[x-1][y-1] == ' ')
+            {
+                board[x - 1][y - 1] = '*';
+            }
+            else
+            {
+                printf("该坐标被非法占用\n");
+            }
+        }
+        else
+        {
+            printf("坐标非法，请重新输入!\n");
+        }
+    }
+}

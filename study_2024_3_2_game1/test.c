@@ -17,6 +17,14 @@ void game()
     InitBoard(board, ROW, COL);
     //打印棋盘
     DisplayBoard(board, ROW, COL);
+    //下棋
+    while(1)
+    {
+        //玩家下棋
+        PlayerMove(board, ROW, COL);
+        //电脑下棋 
+
+    }
 }
 
 void test()

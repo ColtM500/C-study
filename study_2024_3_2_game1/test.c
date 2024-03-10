@@ -11,6 +11,7 @@ void menu()
 //游戏的整个算法实现
 void game()
 {
+    char res = 0;
     //数组-存放走出的棋盘信息
     char board[ROW][COL] = {0}; //全部空格
     //初始化棋盘
@@ -22,14 +23,44 @@ void game()
     {
         //玩家下棋
         PlayerMove(board, ROW, COL);
-        //电脑下棋 
+        DisplayBoard(board, ROW, COL);
+        //判断玩家输赢
+        res = IsWin(board, ROW, COL);
+        if(res != 'C')
+        {
+            break;
+        }
 
+        //电脑下棋
+        ComputerMove(board, ROW, COL);
+        DisplayBoard(board, ROW, COL);
+        //判断电脑输赢
+        res = IsWin(board, ROW, COL);
+        if(res != 'C')
+        {
+            break;
+        }
     }
+    if(res == '*')
+    {
+        printf("玩家赢!\n");
+    }
+    else if(res == '#')
+    {
+        printf("电脑赢!\n");
+    }
+    else
+    {
+        printf("平局!\n");
+    }
+
 }
 
 void test()
 {
     int input = 0;
+    //设置一个时间戳 time函数放空指针参数 放随机数种子里用
+    srand((unsigned int)time(NULL));
     do{
         menu();
         printf("请选择:>");

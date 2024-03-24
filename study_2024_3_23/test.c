@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main()
-{
+// int main()
+// {
     // double a = 5 % 2;//商2余1
     // printf("a = %lf\n", a);
     // return 0;
@@ -86,5 +86,5 @@ int main()
 
     
 
-    return 0;
-}
+//     return 0;
+// }

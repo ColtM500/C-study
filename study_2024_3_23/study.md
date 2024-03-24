@@ -32,3 +32,16 @@
     a = a ^ b;
     printf("after: a=%d b=%d\n", a, b);
 
+
+
+![Alt text](image-7.png)
+![Alt text](image-8.png)
+
+![Alt text](image-9.png)
+
+![Alt text](image-10.png)
+
+![Alt text](image-11.png)
+![Alt text](image-12.png)
+
+![Alt text](image-13.png)

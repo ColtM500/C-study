@@ -12,6 +12,7 @@ int main()
     int(*p)[10] = &arr; // 取出数组的地址
 
     int (*pfArr[4])(int, int); // pfArr是一个数组-函数指针的数组
+    int(*(*ppfArr)[4])(int, int) = &pfArr;
 
     return 0;
 }

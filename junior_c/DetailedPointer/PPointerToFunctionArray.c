@@ -20,7 +20,6 @@ int Add(int x, int y)
 
 void BubbleSort(int arr[], int sz)
 {
-    
 }
 
 // qsort - 可以排序任意类型的数据
